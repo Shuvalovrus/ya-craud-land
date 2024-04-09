@@ -161,7 +161,7 @@ a {
   position: relative;
 
   background-color: var(--pearl-bush);
-  background-image: url('../assets/images/preview-background-sm.jpg');
+  background-image: url('./assets/images/preview-background-sm.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -423,7 +423,7 @@ a {
 .stages__swiper .swiper__slide:first-child .stages__card:first-child:after {
   max-width: 317px;
 
-  content: url('../assets/images/plane-sm.png');
+  content: url('./assets/images/plane-sm.png');
 
   position: absolute;
 
@@ -507,7 +507,7 @@ a {
 
   color: var(--mine-shaft-bright);
 
-  background-image: url('../assets/images/card-bg.png');
+  background-image: url('./assets/images/card-bg.png');
   background-size: cover;
 }
 /* TODO заменить все значения на переменные */
@@ -637,7 +637,7 @@ a {
 
   /* Preview */
   .preview {
-    background-image: url('../assets/images/preview-background-mid.jpg');
+    background-image: url('./assets/images/preview-background-mid.jpg');
   }
   .preview__section-title {
     margin-bottom: 26px;
@@ -799,7 +799,7 @@ a {
     max-width: 465px;
   }
   .stages__card:nth-child(7)::after {
-    content: url('../assets/images/plane.png');
+    content: url('./assets/images/plane.png');
 
     position: absolute;
 
@@ -866,7 +866,7 @@ a {
 @media screen and (min-width: 1919px) {
   /* Preview */
   .preview {
-    background-image: url('../assets/images/preview-background-big.jpg');
+    background-image: url('./assets/images/preview-background-big.jpg');
   }
   /* /Preview */
 }
