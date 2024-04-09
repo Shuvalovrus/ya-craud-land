@@ -1,31 +1,27 @@
-function removeSwiperElements() {
-  const screenWidth = window.innerWidth
-  if (screenWidth > 768) {
-    const swiperSlides = document.querySelectorAll('.stages__swiper .swiper__slide')
-    const swiperControls = document.querySelector('.swiper__controls')
+import Swiper from './js/swipper.js'
+import { removeSwiperElements } from './js/removeSwiper.js'
+import { scrollHandler } from './js/scroll.js'
 
-    swiperControls.remove()
+window.addEventListener('load', () => {
+  const previewButtons = document.querySelectorAll('.preview__button')
+  const mobileSwiper = document.querySelector('.swiper_mobile')
 
-    swiperSlides.forEach((slide) => {
-      const children = slide.children
-
-      Array.from(children).forEach((child) => {
-        slide.parentNode.insertBefore(child, slide)
-      })
-      slide.remove()
-    })
-
-    const swiperWrapper = document.querySelector('.swiper__wrapper')
-
-    const wrapperChildren = swiperWrapper.children
-
-    Array.from(wrapperChildren).forEach((child) => {
-      swiperWrapper.parentNode.insertBefore(child, swiperWrapper)
-    })
-
-    swiperWrapper.remove()
+  let membersSwiperOptions = {
+    isLooped: true,
+    autoPlayInterval: 4000,
+    typePagination: 'num',
   }
-}
+  if (window.matchMedia('(min-width: 768px)').matches) membersSwiperOptions.toShow = 3
 
-window.addEventListener('load', removeSwiperElements)
-window.addEventListener('resize', removeSwiperElements)
+  const stagesSwiper = new Swiper('.stages__swiper', false)
+  const membersSwiper = new Swiper('.members__swiper', membersSwiperOptions)
+
+  stagesSwiper.init()
+  membersSwiper.init()
+
+  removeSwiperElements(mobileSwiper)
+
+  previewButtons.forEach((button) => {
+    button.addEventListener('click', (event) => scrollHandler(button))
+  })
+})

@@ -40,11 +40,13 @@
             <button class="preview__button button button_white">Подробнее о турнире</button>
           </div>
         </div>
-        <div class="preview__ticker ticker">
+      </section>
+      <div class="main__ticker ticker">
+        <span>
           Дело помощи утопающим — дело рук самих утопающих! · Шахматы двигают вперед не только
           культуру, но и экономику! · Лед тронулся, господа присяжные заседатели!
-        </div>
-      </section>
+        </span>
+      </div>
       <section class="main__activity activity">
         <div class="activity__container _container">
           <div class="activity__content">
@@ -67,7 +69,7 @@
               />
             </div>
             <div class="activity__row">
-              <img class="activity__image" src="../assets/images/chess_player.jpg" alt="" />
+              <img class="activity__image" src="../assets/images/chess-player.jpg" alt="" />
               <div class="activity__col">
                 <p class="activity__text text">
                   и Сеанс
@@ -110,8 +112,7 @@
       <section class="main__stages stages">
         <div class="stages__content _container">
           <h2 class="stages__section-title section-title">Этапы преображения Васюков</h2>
-          <a class="stages__sources" href="#">Будущие источники обогащения васюкинцев</a>
-          <div class="stages__swiper swiper">
+          <div class="stages__swiper swiper swiper_mobile">
             <div class="swiper__wrapper">
               <div class="swiper__slide">
                 <div class="stages__card card">
@@ -157,7 +158,7 @@
               </div>
             </div>
             <div class="swiper__controls">
-              <button disabled class="swiper__button-prev button_dark button_rounded">
+              <button class="swiper__button-prev button_dark button_rounded">
                 <svg
                   width="10"
                   height="18"
@@ -173,13 +174,7 @@
                   />
                 </svg>
               </button>
-              <div class="swiper__pagination pagination">
-                <span class="pagination__item pagination__item_active"></span>
-                <span class="pagination__item"></span>
-                <span class="pagination__item"></span>
-                <span class="pagination__item"></span>
-                <span class="pagination__item"></span>
-              </div>
+              <div class="swiper__pagination pagination"></div>
               <button class="swiper__button-next button_dark button_rounded">
                 <svg
                   width="10"
@@ -202,8 +197,8 @@
       </section>
       <section class="main__members members">
         <div class="members__content _container">
-          <h2 class="members__section-title section-title">Участники турнира</h2>
           <div class="members__swiper swiper">
+            <h2 class="members__section-title section-title">Участники турнира</h2>
             <div class="swiper__wrapper">
               <div class="swiper__slide">
                 <div class="members__member member">
@@ -279,7 +274,7 @@
               </div>
             </div>
             <div class="swiper__controls">
-              <button disabled class="swiper__button-prev button_dark button_rounded">
+              <button class="swiper__button-prev button_dark button_rounded">
                 <svg
                   width="10"
                   height="18"
@@ -295,10 +290,7 @@
                   />
                 </svg>
               </button>
-              <div class="swiper__pagination pagination pagination_counter">
-                <span class="pagination__current">1</span>
-                <span class="pagination__total">/6</span>
-              </div>
+              <div class="swiper__pagination pagination pagination_counter"></div>
               <button class="swiper__button-next button_dark button_rounded">
                 <svg
                   width="10"
@@ -319,8 +311,10 @@
           </div>
         </div>
         <div class="members__ticker ticker">
-          Дело помощи утопающим — дело рук самих утопающих! · Шахматы двигают вперед не только
-          культуру, но и экономику! · Лед тронулся, господа присяжные заседатели!
+          <span>
+            Дело помощи утопающим — дело рук самих утопающих! · Шахматы двигают вперед не только
+            культуру, но и экономику! · Лед тронулся, господа присяжные заседатели!
+          </span>
         </div>
       </section>
     </main>
@@ -331,6 +325,6 @@
         «Двенадцать стульев».
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./script.js" type="module"></script>
   </body>
 </html>
